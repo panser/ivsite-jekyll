@@ -8,15 +8,18 @@ layout: default
     <div class="col-sm-6">
       {% include index/news.html %}
     </div>
-    <div class="col-sm-6">RM API</div>
+    <div class="col-sm-6">
+      {% include index/rm-api.html %}
+    </div>
   </div>
   <div class="row">
-    <div class="col-sm-6">Google Excel Coworker</div>
-    <div class="col-sm-6">Google Form</div>
+    <div class="col-sm-6">
+      {% include index/google-coworker.html %}
+    </div>
+    <div class="col-sm-6">
+      {% include index/google-form.html %}
+    </div>
   </div>
 
 </div>
 
-<div class="container">
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</div>
