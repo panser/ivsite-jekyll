@@ -39,3 +39,6 @@ collections:
     output: true
     permalink: /collections/product/:title/
     navbarTitle: Продукты
+  news:
+    output: true
+    permalink: /collections/news/:title/
