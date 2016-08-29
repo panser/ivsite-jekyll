@@ -35,3 +35,7 @@ collections:
     output: true
     permalink: /collections/job/:title/
     navbarTitle: Вакансии
+  product:
+    output: true
+    permalink: /collections/product/:title/
+    navbarTitle: Продукты
