@@ -2,24 +2,21 @@
 layout: default
 ---
 
-<div class="home">
+<div class="container">
 
-  <p>
-    <h2>Новости</h2>
-    <ul class="">
-      {% for post in site.news %}
-      <li>
+  <div class="row">
+    <div class="col-sm-6">
+      {% include index/news.html %}
+    </div>
+    <div class="col-sm-6">RM API</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">Google Excel Coworker</div>
+    <div class="col-sm-6">Google Form</div>
+  </div>
 
-        <h2>
-          <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-        <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+</div>
 
-      </li>
-      {% endfor %}
-    </ul>
-  </p>
-
+<div class="container">
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
