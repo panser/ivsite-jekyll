@@ -13,17 +13,25 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: Integrity Vision Cool Site
+email: 	spanov@integrity.com.ua
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  INTEGRITY VISION – ЛИДЕР СРЕДИ СИСТЕМНЫХ ИНТЕГРАТОРОВ УКРАИНЫ.
+  Высокая квалификация и серьезный практический опыт специалистов компании.
+  Широкий спектр интеграционных платформ от ведущих поставщиков ИТ-решений.
+  Командная работа и клиентоориентированность.
+  Индивидуальный и комплексный подход к решению задач.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
+twitter_username: iv
+github_username:  iv
 
 # Build settings
 markdown: kramdown
 theme: minima
+
+collections:
+  job:
+    output: true
+    permalink: /collections/job/:title/
+    navbarTitle: Вакансии

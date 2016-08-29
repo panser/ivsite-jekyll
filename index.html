@@ -4,17 +4,31 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+  <h2>Посты</h2>
+  <ul class="">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+          <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
         </h2>
+        <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+
       </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Вакансии</h2>
+  <ul class="">
+    {% for post in site.job %}
+    <li>
+
+      <h2>
+        <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+      </h2>
+      <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+    </li>
     {% endfor %}
   </ul>
 
