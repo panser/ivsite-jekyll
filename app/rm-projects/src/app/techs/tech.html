@@ -1,8 +1,14 @@
-<div class="tech">
-  <img class="tech-logo" [src]="tech.logo"/>
-  <h3 class="tech-h3">
+<div class="row">
+  <div class="col-sm-3">
+    <img [src]="tech.logo"/>
+  </div>
+  <div class="col-sm-3">
     {{ tech.title }}
-  </h3>
-  <p>{{ tech.text1 }}</p>
-  <p>{{ tech.text2 }}</p>
+  </div>
+  <div class="col-sm-3">
+    {{ tech.text1 }}
+  </div>
+  <div class="col-sm-3">
+    {{ tech.text2 }}
+  </div>
 </div>

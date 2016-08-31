@@ -6,5 +6,6 @@ import {Tech} from './techs';
   template: require('./tech.html')
 })
 export class TechComponent {
-  @Input() public tech: Tech;
+  @Input() 
+  public tech: Tech;
 }
