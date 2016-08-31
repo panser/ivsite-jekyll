@@ -6,10 +6,13 @@ import {TechComponent} from './tech';
 
 export class Tech {
   constructor(
-    public logo: string,
-    public title: string,
-    public text1: string,
-    public text2: string
+    public name: string,
+    public identifier: string,
+    public description: string,
+    public status: string,
+    public is_public: string,
+    public created_on: string,
+    public updated_on: string
   ) {}
 }
 
@@ -20,8 +23,11 @@ export class Tech {
   providers: [HTTP_PROVIDERS]
 })
 export class TechsComponent {
+
   public techs: Tech[];
   public tech: Tech;
+  // private redmineProjectsUrl = 'app/techs/projects.json'
+  private redmineProjectsUrl = 'http://demo.redmine.org/projects.json';  // URL to web api
 
   constructor(public http: Http) {
     this.getTechs().subscribe(result => this.techs = result);
@@ -29,7 +35,7 @@ export class TechsComponent {
 
   getTechs(): Observable<Tech[]> {
     return this.http
-      .get('app/techs/techs.json')
-      .map(response => response.json());
+      .get(redmineProjectsUrl)
+      .map(response => response.json().projects);
   }
 }
