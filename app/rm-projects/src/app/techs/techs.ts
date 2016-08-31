@@ -28,6 +28,7 @@ export class TechsComponent {
   public tech: Tech;
   // private redmineProjectsUrl = 'app/techs/projects.json'
   private redmineProjectsUrl = 'http://demo.redmine.org/projects.json';  // URL to web api
+  private jsonField = 'projects';
 
   constructor(public http: Http) {
     this.getTechs().subscribe(result => this.techs = result);
@@ -35,7 +36,7 @@ export class TechsComponent {
 
   getTechs(): Observable<Tech[]> {
     return this.http
-      .get(redmineProjectsUrl)
-      .map(response => response.json().projects);
+      .get(this.redmineProjectsUrl)
+      .map(response => response.json()[this.jsonField]);
   }
 }
