@@ -30,6 +30,8 @@ github_username:  iv
 markdown: kramdown
 theme: minima
 
+excerpt_separator: <!--more-->
+
 collections:
   job:
     output: true
