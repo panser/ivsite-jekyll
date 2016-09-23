@@ -23,8 +23,10 @@ jQuery(function() {
     });
 
     // Event when the form is submitted
-    $("#site_search").submit(function(event){
+    $("#site_search").submit(function(event) {
         event.preventDefault();
+    });
+    $("#site_search").keyup(function(event){
         var query = $("#search_box").val(); // Get the value for the text field
 
         if(query.length) {
