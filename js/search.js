@@ -2,10 +2,12 @@ jQuery(function() {
     // Initialize lunr with the fields to be searched, plus the boost.
     window.idx = lunr(function () {
         this.field('id');
-        this.field('title');
-        this.field('content', { boost: 10 });
+        this.field('title', { boost: 10 });
+        this.field('content');
         this.field('author');
         this.field('categories');
+
+        this.use(lunr.ru);
     });
 
     // Get the generated search_data.json file so lunr.js can search it locally.
