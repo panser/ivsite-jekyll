@@ -26,9 +26,17 @@ jQuery(function() {
     $("#site_search").submit(function(event){
         event.preventDefault();
         var query = $("#search_box").val(); // Get the value for the text field
-        var results = window.idx.search(query); // Get lunr to perform a search
-        $('#content').empty();
-        display_search_results(results); // Hand the results off to be displayed
+
+        if(query.length) {
+            var results = window.idx.search(query); // Get lunr to perform a search
+            display_search_results(results); // Hand the results off to be displayed
+            $('#site-content').hide();
+            $('#search-content').show();
+        }
+        else{
+            $('#site-content').show();
+            $('#search-content').hide();
+        }
     });
 
     function display_search_results(results) {
@@ -46,14 +54,14 @@ jQuery(function() {
                     var item = loaded_data[result.ref];
 
                     // Build a snippet of HTML for this result
-                    var appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
+                    var appendString = '<li><h4><a href="' + item.url + '">' + item.title + '</a></h4></li>';
 
                     // Add the snippet to the collection of results.
                     $search_results.append(appendString);
                 });
             } else {
                 // If there are no results, let the user know.
-                $search_results.html('<li>No results found.<br/>Please check spelling, spacing, yada...</li>');
+                $search_results.html('<div class="well well-sm">Sorry :( , we don\'t find anything </div>');
             }
         });
     }
