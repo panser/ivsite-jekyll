@@ -19,7 +19,7 @@ directory "_news" do
                   layout: 'post',
                   title: element.title,
                   date: element.updated_at.to_s,
-                  categories: 'news'
+                  category: 'news'
       content element.description
     end
   end
