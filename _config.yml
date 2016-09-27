@@ -32,6 +32,8 @@ theme: minima
 
 excerpt_separator: <!--more-->
 
+discourse_url: "http://spanov.integrity.com.ua:81/"
+
 collections:
   job:
     output: true
