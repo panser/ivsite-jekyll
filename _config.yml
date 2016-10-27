@@ -13,18 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Integrity Vision Cool Site
-email: 	spanov@integrity.com.ua
+title: Jekyll test site
+email: 	gostroy@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  INTEGRITY VISION – ЛИДЕР СРЕДИ СИСТЕМНЫХ ИНТЕГРАТОРОВ УКРАИНЫ.
-  Высокая квалификация и серьезный практический опыт специалистов компании.
-  Широкий спектр интеграционных платформ от ведущих поставщиков ИТ-решений.
-  Командная работа и клиентоориентированность.
-  Индивидуальный и комплексный подход к решению задач.
+  try jekyll
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
-twitter_username: iv
-github_username:  iv
+twitter_username: panser
+github_username:  panser
 
 # Build settings
 markdown: kramdown
@@ -32,17 +28,15 @@ theme: minima
 
 excerpt_separator: <!--more-->
 
-discourse_url: "http://spanov.integrity.com.ua:81/"
-
 collections:
   job:
     output: true
     permalink: /collections/job/:title/
-    navbarTitle: Вакансии
+    navbarTitle: Jobs
   product:
     output: true
     permalink: /collections/product/:title/
-    navbarTitle: Продукты
+    navbarTitle: Products
   news:
     output: true
     permalink: /collections/news/:title/
