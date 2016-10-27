@@ -1,0 +1,13 @@
+image: jekyll:latest
+
+pages:
+
+  script:
+  - bundle update
+  - jekyll build
+
+  artifacts:
+    paths:
+    - _site
+  only:
+  - master
